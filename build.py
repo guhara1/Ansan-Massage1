@@ -19,7 +19,9 @@ from content import PAGES
 from content.site import (BASE_URL, BRAND, NAV, PHONE, PHONE_DISPLAY)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-PUBLIC_DIR = os.path.join(ROOT, "public")
+# Cloudflare Pages가 빌드를 실행하지 않고 저장소 루트를 그대로 배포하므로
+# 빌드 결과물을 저장소 루트에 직접 출력한다.
+PUBLIC_DIR = ROOT
 MIN_INDEX_CHARS = 2000
 
 
