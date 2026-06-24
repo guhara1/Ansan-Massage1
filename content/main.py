@@ -1,5 +1,6 @@
 import json
 from .site import BRAND, BASE_URL, PHONE
+from .pricing import get_pricing_section
 
 _BASE = BASE_URL.rstrip("/")
 
@@ -266,6 +267,8 @@ PAGE = {
     <li><strong>불법·선정적 서비스 불가 안내</strong> - 건전한 관리 서비스만 제공</li>
   </ul>
 </section>
+
+""" + get_pricing_section() + """
 
 <section id="faq">
   <h2>안산 출장마사지 자주 묻는 질문</h2>

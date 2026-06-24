@@ -1,5 +1,7 @@
 # 안산 생활권 페이지 — 12개 (지역·역 통합 생활권)
 
+from .pricing import get_pricing_section
+
 def create_lifestyle_page(path, title, desc, h1, breadcrumb, body_content):
     """생활권 페이지 생성 헬퍼 함수"""
     return {
@@ -99,17 +101,7 @@ jungang_gojan = create_lifestyle_page(
 <p>각 시나리오에 맞춰 <a href="/guide/">이용 가이드</a>에서 준비 사항을 미리 확인하시면 더욱 편리합니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>중앙역·고잔 생활권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-<li>3시간: 210,000원~</li>
-</ul>
-<p>정확한 가격은 <a href="tel:0508-202-4719">0508-202-4719</a>로 문의하세요.</p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 choji_lifestyle = create_lifestyle_page(
@@ -215,16 +207,7 @@ choji_lifestyle = create_lifestyle_page(
 </ul>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>초지역·초지동 생활권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 ansan_wongok = create_lifestyle_page(
@@ -341,16 +324,7 @@ ansan_wongok = create_lifestyle_page(
 <p>처음 이용하신다면 <a href="/guide/">이용 가이드</a>와 메인 <a href="/">바로 GO 안내</a>를 함께 참고하시기 바랍니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>안산역·원곡동 생활권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 sangnoksu_bono = create_lifestyle_page(
@@ -466,17 +440,7 @@ sangnoksu_bono = create_lifestyle_page(
 <p>처음 이용하신다면 <a href="/guide/">이용 가이드</a>와 메인 <a href="/">바로 GO 안내</a>를 함께 참고하시기 바랍니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>상록수·본오 생활권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-<li>3시간: 210,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 hanyang_sa = create_lifestyle_page(
@@ -592,16 +556,7 @@ hanyang_sa = create_lifestyle_page(
 <p>처음 이용하신다면 <a href="/guide/">이용 가이드</a>와 메인 <a href="/">바로 GO 안내</a>를 함께 참고하시기 바랍니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>한대앞·사동 생활권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 seonbu_lifestyle = create_lifestyle_page(
@@ -717,16 +672,7 @@ seonbu_lifestyle = create_lifestyle_page(
 <p>처음 이용하신다면 <a href="/guide/">이용 가이드</a>와 메인 <a href="/">바로 GO 안내</a>를 함께 참고하시기 바랍니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>선부역·선부동 생활권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 # 추가 6개 생활권
@@ -843,16 +789,7 @@ gohsan_shinshi = create_lifestyle_page(
 <p>처음 이용하신다면 <a href="/guide/">이용 가이드</a>와 메인 <a href="/">바로 GO 안내</a>를 함께 참고하시기 바랍니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>고잔신도시·호수공원 생활권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 wolpi_seongu = create_lifestyle_page(
@@ -967,16 +904,7 @@ wolpi_seongu = create_lifestyle_page(
 <p>처음 이용하신다면 <a href="/guide/">이용 가이드</a>와 메인 <a href="/">바로 GO 안내</a>를 함께 참고하시기 바랍니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>월피·성포 생활권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 banwol_gungun = create_lifestyle_page(
@@ -1092,16 +1020,7 @@ banwol_gungun = create_lifestyle_page(
 <p>처음 이용하신다면 <a href="/guide/">이용 가이드</a>와 메인 <a href="/">바로 GO 안내</a>를 함께 참고하시기 바랍니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>반월·건건 생활권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 wonsi_sihwa = create_lifestyle_page(
@@ -1217,16 +1136,7 @@ wonsi_sihwa = create_lifestyle_page(
 <p>처음 이용하신다면 <a href="/guide/">이용 가이드</a>와 메인 <a href="/">바로 GO 안내</a>를 함께 참고하시기 바랍니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>원시·시화공단 생활권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 shinggil_neungil = create_lifestyle_page(
@@ -1341,16 +1251,7 @@ shinggil_neungil = create_lifestyle_page(
 <p>처음 이용하신다면 <a href="/guide/">이용 가이드</a>와 메인 <a href="/">바로 GO 안내</a>를 함께 참고하시기 바랍니다. 도로명 주소에 가까운 상가나 편의점 이름을 덧붙이면 택지 권역에서도 한층 정확하게 안내됩니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>신길·능길 생활권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 daebu_island = create_lifestyle_page(
@@ -1455,16 +1356,7 @@ daebu_island = create_lifestyle_page(
 </ul>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>대부도 생활권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 # PAGES 리스트에 모든 생활권 페이지 집계

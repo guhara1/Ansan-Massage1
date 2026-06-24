@@ -1,5 +1,7 @@
 # 안산 정보 페이지 — 5개 (예약, 가이드, 정책 등)
 
+from .pricing import get_pricing_section
+
 def create_info_page(path, title, desc, h1, breadcrumb, body_content):
     """정보 페이지 생성 헬퍼 함수"""
     return {
@@ -171,7 +173,7 @@ reservation = create_info_page(
 </ul>
 <p>예약 전 마지막으로 확인하고 싶은 점이 있으시면 <a href="/support/">고객센터</a>를 통해서도 도움을 받으실 수 있습니다.</p>
 </section>
-"""
+""" + get_pricing_section()
 )
 
 check = create_info_page(
@@ -326,7 +328,7 @@ check = create_info_page(
 <h2>문의</h2>
 <p>이용 전 확인사항에 대해 더 알고 싶으시면 <a href="tel:0508-202-4719">0508-202-4719</a>로 문의하세요.</p>
 </section>
-"""
+""" + get_pricing_section()
 )
 
 guide = create_info_page(
@@ -487,7 +489,7 @@ guide = create_info_page(
 <h2>문의</h2>
 <p>홈타이 서비스에 대해 더 알고 싶으시면 <a href="tel:0508-202-4719">0508-202-4719</a>로 문의하세요. 운영 전반에 대한 안내는 <a href="/support/">고객센터</a>에서도 도와드립니다.</p>
 </section>
-"""
+""" + get_pricing_section()
 )
 
 privacy = create_info_page(
@@ -647,7 +649,7 @@ privacy = create_info_page(
 <h2>정책 동의</h2>
 <p>서비스 예약 및 이용으로 본 개인정보처리방침에 동의하는 것으로 간주됩니다. 본 방침과 관련하여 추가 안내가 필요하시면 <a href="/check/">이용 전 확인사항</a> 페이지의 개인정보 보호 항목도 함께 참고하시기 바랍니다. 바로 GO는 고객의 신뢰를 가장 중요한 가치로 삼아, 수집한 모든 개인정보를 관계 법령과 본 방침에 따라 책임감 있게 관리할 것을 약속드립니다. 개인정보 처리와 관련한 어떠한 의문이나 우려도 언제든 편하게 문의해 주시기 바랍니다.</p>
 </section>
-"""
+""" + get_pricing_section()
 )
 
 support = create_info_page(
@@ -798,7 +800,7 @@ support = create_info_page(
 <p><a href="https://t.me/googleseolab">Telegram: @googleseolab</a></p>
 <p>또는 <a href="tel:0508-202-4719">0508-202-4719</a>로 연락 주세요. 서비스 이용 전 확인이 필요한 사항은 <a href="/check/">이용 전 확인사항</a>에서도 자세히 안내하고 있습니다.</p>
 </section>
-"""
+""" + get_pricing_section()
 )
 
 # PAGES 리스트에 모든 정보 페이지 집계

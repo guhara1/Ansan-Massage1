@@ -1,5 +1,7 @@
 # 안산 구별·지역별 페이지 — 23개 (상록구·단원구 + 21개 지역)
 
+from .pricing import get_pricing_section
+
 def create_area_page(path, title, desc, h1, breadcrumb, body_content):
     """지역 페이지 생성 헬퍼 함수"""
     return {
@@ -83,22 +85,11 @@ sangnok_gu = create_area_page(
 <p><strong>Q. 예약 전 위생·안전 기준이 궁금합니다.</strong><br>위생 수칙과 안전 안내는 <a href="/check/">이용 전 확인사항</a>에 정리되어 있으며, 합법적 범위 내 정보 안내만 제공합니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>상록구 출장마사지 기본 요금</strong> (시간별, 서비스 내용에 따라 상이)</p>
-<ul>
-<li>1시간 기준: 70,000원~</li>
-<li>2시간 기준: 140,000원~</li>
-<li>3시간 기준: 210,000원~</li>
-</ul>
-<p>정확한 가격은 <a href="tel:0508-202-4719">0508-202-4719</a>로 문의하세요.</p>
-</section>
-
 <section>
 <h2>상록구 관련 페이지</h2>
 <p>인접한 <a href="/danwon-gu/">단원구 출장마사지 안내</a>도 함께 참고하세요. 안산 전체 안내는 <a href="/">홈</a>에서 확인할 수 있습니다.</p>
 </section>
-"""
+""" + get_pricing_section()
 )
 
 danwon_gu = create_area_page(
@@ -180,22 +171,11 @@ danwon_gu = create_area_page(
 <p><strong>바로 GO</strong>가 안내하는 단원구 출장마사지·홈타이 정보는 모두 <strong>위생·안전·합법 범위</strong> 안에서만 제공됩니다. 본 페이지는 음란·불법 행위를 묘사하거나 알선하지 않으며, 지역 생활권 안내와 위생 수칙, 예약 절차를 정리한 합법적 정보 안내를 목적으로 합니다. 방문 전 사용 용품의 청결 상태를 점검하고, 신시가지와 주상복합이 많은 단원구 특성을 고려해 정중하고 조용한 방문을 원칙으로 삼습니다. 예약 시 받은 개인정보는 방문 안내 목적에만 사용되며, 자세한 처리 기준은 <a href="/support/privacy/">개인정보 처리방침</a>에서 확인하실 수 있습니다. 위생·안전 세부 사항은 <a href="/check/">이용 전 확인사항</a>에 정리되어 있으니 첫 이용 전 한 번 읽어보시길 권합니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>단원구 출장마사지 기본 요금</strong> (시간별, 서비스 내용에 따라 상이)</p>
-<ul>
-<li>1시간 기준: 70,000원~</li>
-<li>2시간 기준: 140,000원~</li>
-<li>3시간 기준: 210,000원~</li>
-</ul>
-<p>정확한 요금은 <a href="tel:0508-202-4719">0508-202-4719</a>로 문의하세요.</p>
-</section>
-
 <section>
 <h2>단원구 관련 페이지</h2>
 <p>인접한 <a href="/sangnok-gu/">상록구 출장마사지 안내</a>도 함께 확인하세요. 전체 안내는 <a href="/">홈</a>에서 볼 수 있습니다.</p>
 </section>
-"""
+""" + get_pricing_section()
 )
 
 # ===== 지역별 페이지 (21개) =====
@@ -307,16 +287,7 @@ jungang_dong = create_area_page(
 <p><strong>바로 GO</strong>는 중앙동에서도 위생·안전·합법 범위를 최우선 기준으로 삼습니다. 본 안내는 합법적 정보 제공만을 목적으로 하며, 방문 전 사용 용품의 청결 상태를 점검하고 도심 주거 환경을 고려해 정중하고 조용한 방문을 원칙으로 합니다. 예약 시 받은 개인정보는 방문 안내 목적에만 사용되며, 자세한 기준은 <a href="/support/privacy/">개인정보 처리방침</a>에서 확인하실 수 있습니다. 위생 세부 사항은 <a href="/check/">이용 전 확인사항</a>에, 변경·취소 등 절차 문의는 <a href="/support/">고객지원</a>에 정리되어 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>중앙동 출장마사지 기본 요금</strong> (시간별, 서비스 내용에 따라 상이)</p>
-<ul>
-<li>1시간 기준: 70,000원~</li>
-<li>2시간 기준: 140,000원~</li>
-</ul>
-<p>정확한 요금은 <a href="tel:0508-202-4719">0508-202-4719</a>로 문의하세요.</p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 gojan_dong = create_area_page(
@@ -430,16 +401,7 @@ gojan_dong = create_area_page(
 <p><strong>바로 GO</strong>는 고잔동에서도 위생·안전·합법 범위를 최우선 기준으로 삼습니다. 본 안내는 합법적 정보 제공만을 목적으로 하며, 가족 단위 거주자가 많은 신시가지 특성을 고려해 정중하고 조용한 방문을 원칙으로 합니다. 방문 전 사용 용품의 청결 상태를 점검하며, 예약 시 받은 개인정보는 방문 안내 목적에만 사용됩니다. 자세한 기준은 <a href="/support/privacy/">개인정보 처리방침</a>에서, 위생 세부 사항은 <a href="/check/">이용 전 확인사항</a>에서, 변경·취소 문의는 <a href="/support/">고객지원</a>에서 확인하실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>고잔동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a> 문의</p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 choji_dong = create_area_page(
@@ -553,16 +515,7 @@ choji_dong = create_area_page(
 <p><strong>바로 GO</strong>는 초지동에서도 위생·안전·합법 범위를 최우선 기준으로 삼습니다. 본 안내는 합법적 정보 제공만을 목적으로 하며, 방문 전 사용 용품의 청결 상태를 점검하고 신도시 주거 환경을 고려해 정중하고 조용한 방문을 원칙으로 합니다. 예약 시 받은 개인정보는 방문 안내 목적에만 사용되며, 자세한 기준은 <a href="/support/privacy/">개인정보 처리방침</a>에서 확인하실 수 있습니다. 위생 세부 사항은 <a href="/check/">이용 전 확인사항</a>에, 절차 문의는 <a href="/support/">고객지원</a>에 정리되어 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>초지동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a> 예약</p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 wongok_dong = create_area_page(
@@ -677,16 +630,7 @@ wongok_dong = create_area_page(
 <p><strong>바로 GO</strong>는 원곡동에서도 위생·안전·합법 범위를 최우선 기준으로 삼습니다. 본 안내는 합법적 정보 제공만을 목적으로 하며, 방문 전 사용 용품의 청결 상태를 점검합니다. 예약 시 받은 개인정보는 방문 안내 목적에만 사용되며, 자세한 기준은 <a href="/support/privacy/">개인정보 처리방침</a>에서 확인하실 수 있습니다. 위생 세부 사항은 <a href="/check/">이용 전 확인사항</a>에, 변경·취소 등 문의는 <a href="/support/">고객지원</a>에 정리되어 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>원곡동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 seonbu_dong = create_area_page(
@@ -800,16 +744,7 @@ seonbu_dong = create_area_page(
 <p><strong>바로 GO</strong>는 선부동에서도 위생·안전·합법 범위를 최우선 기준으로 삼습니다. 본 안내는 합법적 정보 제공만을 목적으로 하며, 주거 밀집 지역의 조용한 환경을 고려해 정중한 방문과 소음 관리를 원칙으로 합니다. 방문 전 사용 용품의 청결 상태를 점검하며, 예약 시 받은 개인정보는 방문 안내 목적에만 사용됩니다. 자세한 기준은 <a href="/support/privacy/">개인정보 처리방침</a>에서, 위생 사항은 <a href="/check/">이용 전 확인사항</a>에서, 문의는 <a href="/support/">고객지원</a>에서 확인하실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>선부동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a> 예약</p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 hasu_dong = create_area_page(
@@ -923,16 +858,7 @@ hasu_dong = create_area_page(
 <p><strong>바로 GO</strong>는 호수동에서도 위생·안전·합법 범위를 최우선 기준으로 삼습니다. 본 안내는 합법적 정보 제공만을 목적으로 하며, 가족 단위 거주자가 많은 단지 특성을 고려해 정중하고 조용한 방문을 원칙으로 합니다. 방문 전 사용 용품의 청결 상태를 점검하며, 예약 시 받은 개인정보는 방문 안내 목적에만 사용됩니다. 자세한 기준은 <a href="/support/privacy/">개인정보 처리방침</a>에서, 위생 사항은 <a href="/check/">이용 전 확인사항</a>에서, 문의는 <a href="/support/">고객지원</a>에서 확인하실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>호수동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 # 상록구 지역들
@@ -1021,16 +947,7 @@ bono_dong = create_area_page(
 </ul>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>본오동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 sa_dong = create_area_page(
@@ -1123,16 +1040,7 @@ sa_dong = create_area_page(
 <p>예약과 위생 절차가 처음이라면 <a href="/guide/">서비스 이용 안내</a>와 <a href="/reservation/">예약 안내</a>를 먼저 확인하시고, 위생·안전 기준은 <a href="/check/">이용 전 확인사항</a>에서 살펴보시길 권합니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>사동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 wolpi_dong = create_area_page(
@@ -1226,16 +1134,7 @@ wolpi_dong = create_area_page(
 <p>예약 절차가 처음이라면 <a href="/guide/">서비스 이용 안내</a>와 <a href="/reservation/">예약 안내</a>를 먼저 확인하시고, 묶음 안내는 <a href="/area/wolpi-seongu/">월피·성포 생활권</a> 페이지에서 살펴보시길 권합니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>월피동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 sai_dong = create_area_page(
@@ -1328,16 +1227,7 @@ sai_dong = create_area_page(
 <p>예약과 위생 절차가 처음이라면 <a href="/guide/">서비스 이용 안내</a>와 <a href="/reservation/">예약 안내</a>를 먼저 확인하시고, 묶음 안내는 <a href="/area/sangnoksu-bono/">상록수·본오 생활권</a> 페이지에서 살펴보시길 권합니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>사이동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a> 예약</p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 il_dong = create_area_page(
@@ -1433,16 +1323,7 @@ il_dong = create_area_page(
 <p>예약 절차가 처음이라면 <a href="/guide/">서비스 이용 안내</a>와 <a href="/reservation/">예약 안내</a>를 먼저 확인하시고, 인접한 <a href="/sangnok-gu/i-dong/">이동</a>·<a href="/sangnok-gu/sai-dong/">사이동</a> 생활권도 함께 참고하시길 권합니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>일동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 i_dong = create_area_page(
@@ -1540,16 +1421,7 @@ i_dong = create_area_page(
 <p>예약과 위생 절차가 처음이라면 <a href="/guide/">서비스 이용 안내</a>와 <a href="/reservation/">예약 안내</a>를 먼저 확인하시고, 묶음 안내는 <a href="/area/sangnoksu-bono/">상록수·본오 생활권</a> 페이지에서 살펴보시길 권합니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>이동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 bukgok_dong = create_area_page(
@@ -1644,16 +1516,7 @@ bukgok_dong = create_area_page(
 <p>부곡동은 인접한 <a href="/sangnok-gu/i-dong/">이동</a>·<a href="/sangnok-gu/il-dong/">일동</a> 상권과 생활권이 이어져 발전 잠재력이 큰 지역으로 평가됩니다. 상록구 전반은 <a href="/sangnok-gu/">상록구 전체 안내</a>에서 함께 확인하실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>부곡동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 seongu_dong = create_area_page(
@@ -1748,16 +1611,7 @@ seongu_dong = create_area_page(
 <p>예약과 위생 절차가 처음이라면 <a href="/guide/">서비스 이용 안내</a>와 <a href="/reservation/">예약 안내</a>를 먼저 확인하시길 권합니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>성포동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 banwol_dong = create_area_page(
@@ -1851,16 +1705,7 @@ banwol_dong = create_area_page(
 <p><strong>Q. 위생·안전 기준이 궁금합니다.</strong><br><a href="/check/">이용 전 확인사항</a>과 <a href="/support/privacy/">개인정보 처리방침</a>에 정리되어 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>반월동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 ansan_dong = create_area_page(
@@ -1959,16 +1804,7 @@ ansan_dong = create_area_page(
 <p>안산동은 안산이라는 지명의 뿌리가 된 <strong>옛 안산읍성지</strong>와 안산향교 등 문화유산이 자리한 단원구 북부의 역사적 지역입니다. 번화가의 번잡함과 거리가 있어 한적하고 차분한 정주 환경을 갖췄으며, 전통 주거지와 농경지 사이로 신규 택지가 더해지며 주거 형태가 다양해지고 있습니다. <a href="/station/ansan-station/">안산역</a> 방면으로 접근할 수 있지만 주거지가 넓게 퍼져 있어, 골목 안쪽이나 외곽 주택은 내비게이션이 부정확할 수 있습니다. 그래서 <strong>바로 GO</strong>로 안산동 출장마사지·홈타이 방문을 안내받으실 때는 정확한 도로명 주소와 진입로, 인근 가게나 사거리 같은 랜드마크를 함께 알려 주시는 것이 동선을 크게 단축하는 방법입니다. 안산동은 인접한 <a href="/danwon-gu/wongok-dong/">원곡동</a>·<a href="/danwon-gu/wa-dong/">와동</a> 생활권과 이어지며, 안산역 일대 묶음 안내는 <a href="/area/ansan-station-wongok/">안산역·원곡동 생활권</a> 페이지에서 확인하실 수 있습니다. 예약 절차가 처음이라면 <a href="/reservation/">예약 안내</a>를 먼저 살펴보시길 권합니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>안산동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 wa_dong = create_area_page(
@@ -2072,16 +1908,7 @@ wa_dong = create_area_page(
 <p>와동의 가장 큰 강점은 <strong>세 방향으로 열린 교통</strong>입니다. <a href="/station/ansan-station/">안산역</a>, <a href="/station/wongok-station/">원곡역</a>, <a href="/station/seonbu-station/">선부역</a> 어느 쪽으로도 접근이 가능해 대중교통 의존 이용자에게도 편리하며, 와동체육공원과 학교·근린 상가가 가까워 가족 단위 거주자가 두텁습니다. 다만 대단지 아파트와 다세대·빌라가 촘촘히 밀집해 비슷한 외관의 건물이 많은 만큼, 차량 방문 시에는 골목 주차가 제한적인 구역이 있어 방문자 주차 구역이나 인근 공영주차장 위치를 미리 확인해 두시는 것이 좋습니다. <strong>바로 GO</strong>로 와동 출장마사지·홈타이 방문을 안내받으실 때는 단지명·동·호수 또는 공동현관 정보와 함께 체육공원·학교 같은 기준점을 알려 주시면 동선이 한층 명확해집니다. 와동은 인접한 <a href="/danwon-gu/wongok-dong/">원곡동</a>·<a href="/danwon-gu/seonbu-dong/">선부동</a> 생활권과 이어지며, 방문 일정과 절차는 <a href="/reservation/">예약 안내</a>에서 미리 확인하시길 권합니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>와동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 baekun_dong = create_area_page(
@@ -2185,16 +2012,7 @@ baekun_dong = create_area_page(
 <p>백운동은 단원구 도심과 가까우면서도 <strong>백운호수와 인근 녹지</strong>를 끼고 있어, 도심 편의와 쾌적한 자연 환경을 동시에 누릴 수 있는 안정적인 주거지역입니다. 잘 정비된 아파트 단지와 단독·다세대 주택이 어우러져 거주 형태가 다양하며, <a href="/danwon-gu/wongok-dong/">원곡동</a>·<a href="/danwon-gu/wa-dong/">와동</a> 생활권과 자연스럽게 이어집니다. <a href="/station/ansan-station/">안산역</a> 방면 접근이 무난해 버스와 전철 이용도 편리합니다. 조용한 주거 환경 특성상 <strong>바로 GO</strong>는 정중한 방문과 소음 관리를 원칙으로 하며, 방문 안내 시에는 건물 유형에 따라 출입·주차 안내가 달라지므로 아파트는 단지명·동·호수를, 주택·빌라는 대문 위치 또는 공동현관 정보를 함께 알려 주시면 좋습니다. 백운호수나 근린공원 같은 기준점을 덧붙이면 동선이 더욱 명확해집니다. 안산역·원곡 일대 묶음 안내는 <a href="/area/ansan-station-wongok/">안산역·원곡동 생활권</a> 페이지에서, 방문 절차는 <a href="/reservation/">예약 안내</a>에서 확인하실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>백운동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 shinggil_dong = create_area_page(
@@ -2298,16 +2116,7 @@ shinggil_dong = create_area_page(
 <p>신길동은 <strong>신길온천</strong>이라는 이름으로 알려진 휴양 자원과 신길지구 택지가 어우러진 단원구 지역으로, 서해선 <a href="/station/shingiloncheon-station/">신길온천역</a>을 통해 광역 이동이 매우 편리합니다. 역세권을 중심으로 신축 아파트 단지가 들어서고 그 주변으로 기존 주거지가 공존해, 한 동 안에서도 위치 유형에 따라 안내 방식이 달라집니다. 택지 조성이 마무리된 구역은 도로와 보행로가 새로 정비되어 접근이 편한 반면, 일부 구역은 공사로 도로 상황이 수시로 바뀔 수 있습니다. 그래서 <strong>바로 GO</strong>로 신길동 출장마사지·홈타이 방문을 안내받으실 때는 가장 최신 주소와 진입 가능한 도로, 그리고 신축 단지의 경우 임시 운영되는 정문 위치까지 함께 확인하시는 것이 중요합니다. 신길동은 인접한 <a href="/danwon-gu/seonbu-dong/">선부동</a> 생활권과 이어지며, 묶음 안내는 <a href="/area/shinggil-neungil/">신길·능길 생활권</a> 페이지에서, 방문 일정은 <a href="/reservation/">예약 안내</a>에서 확인하실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>신길동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 haeyang_dong = create_area_page(
@@ -2406,16 +2215,7 @@ haeyang_dong = create_area_page(
 <p>해양동은 안산 남동부 해안 방면에 자리해 <strong>시화호와 안산갈대습지</strong> 등 수변 자연 자원과 어우러진 외곽 지역으로, 레저·산책 자원이 풍부한 휴양 분위기가 특징입니다. <a href="/station/sangnoksu-station/">상록수역</a> 생활권과는 거리가 있어 차량 이동이 일반적이며, 도심처럼 도로와 진입로가 촘촘하지 않아 위치 안내가 방문 시간을 크게 좌우합니다. 그래서 <strong>바로 GO</strong>로 해양동 출장마사지·홈타이 방문을 안내받으실 때는 정확한 도로명 주소와 진입로, 그리고 습지·호수·큰 도로 같은 랜드마크를 함께 알려 주시는 것이 무엇보다 중요합니다. 이동 거리가 길 수 있어 여유 있는 예약 시간을 권하며, 위치에 따라 사전 협의가 필요할 수 있습니다. 해양동은 상록구 전반과 <a href="/sangnok-gu/">상록구 전체 안내</a>를 통해 연계되며, 변경·취소 등 절차 문의는 <a href="/support/">고객지원</a>에서, 방문 일정은 <a href="/reservation/">예약 안내</a>에서 확인하실 수 있습니다. 안산 전체 안내는 <a href="/">홈</a>에서 살펴보실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>해양동 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 daebu_dong = create_area_page(
@@ -2514,16 +2314,7 @@ daebu_dong = create_area_page(
 <p>대부도는 <strong>시화방조제와 탄도방조제</strong>로 육지와 연결된 안산 최대의 섬으로, 펜션·카페·해산물 음식점이 밀집한 수도권 대표 근교 휴양지입니다. 바다와 갯벌, 포도밭 등 독특한 경관을 갖췄으며 대부북동·대부남동·대부동동 등으로 넓게 나뉘어, 안산 도심과는 차량으로 상당한 거리가 있습니다. 이런 <strong>섬 지역 특성상 사전 협의가 필수</strong>입니다. <strong>바로 GO</strong>로 대부도 출장마사지·홈타이 방문을 안내받으실 때는 펜션·숙소명과 정확한 도로명 주소, 진입로 상황을 알려 주시고, 이동 거리가 길어 방문 가능 여부와 시간을 전화로 먼저 확인해 주셔야 합니다. 비슷한 이름의 펜션이 많아 정확한 명칭이 중요하며, 진입로가 좁거나 비포장인 곳은 미리 안내해 주시면 동선을 조율할 수 있습니다. 단원구 본토와 방조제로 연결되는 대부도의 묶음 안내는 <a href="/area/daebu-island/">대부도 섬 생활권</a> 페이지에서, 단원구 전반은 <a href="/danwon-gu/">단원구 전체 안내</a>에서, 방문 일정과 절차는 <a href="/reservation/">예약 안내</a>에서 확인하실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>기본 요금</h3>
-<p><strong>대부도 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 # PAGES 리스트에 모든 페이지 집계

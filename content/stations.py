@@ -1,5 +1,7 @@
 # 안산 역세권 페이지 — 13개 지하철역
 
+from .pricing import get_pricing_section
+
 def create_station_page(path, title, desc, h1, breadcrumb, body_content):
     """역세권 페이지 생성 헬퍼 함수"""
     return {
@@ -93,17 +95,7 @@ sangnoksu_station = create_station_page(
 <p>상록수역과 함께 인접 <a href="/area/sangnoksu-bono/">상록수·본오 생활권</a>, <a href="/station/hanyang-univ-at-ansan-station/">한대앞역 홈타이</a>, 그리고 <a href="/sangnok-gu/sa-dong/">사동</a> 안내까지 참고하시면 안산 동부 역세권 전반을 한눈에 비교하실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>상록수역 기본 요금</h3>
-<p><strong>상록수역 역세권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-<li>3시간: 210,000원~</li>
-</ul>
-<p>정확한 가격은 <a href="tel:0508-202-4719">0508-202-4719</a>로 문의하세요.</p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 hanyang_station = create_station_page(
@@ -186,16 +178,7 @@ hanyang_station = create_station_page(
 <p>한대앞역과 함께 <a href="/area/hanyang-univ-sa-dong/">한대앞·사동 생활권</a>, 4호선 인접 <a href="/station/sangnoksu-station/">상록수역 출장마사지</a> 안내까지 비교하시면 안산 동부 역세권 전반을 한눈에 파악하실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>한대앞역 기본 요금</h3>
-<p><strong>한대앞역 역세권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 sari_station = create_station_page(
@@ -278,16 +261,7 @@ sari_station = create_station_page(
 <p>사리역과 함께 4호선 인접 <a href="/station/sangnoksu-station/">상록수역 출장마사지</a>, <a href="/station/hanyang-univ-at-ansan-station/">한대앞역 홈타이</a>, 그리고 <a href="/sangnok-gu/">상록구</a> 전체 안내까지 참고하시면 비교에 도움이 됩니다. 처음 방문하시는 경우에도 정확한 주소와 가까운 출구만 알려주시면 차분한 사리역 주거 환경에 맞춰 친절하게 안내드리니 부담 없이 상담하셔도 좋습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>사리역 기본 요금</h3>
-<p><strong>사리역 역세권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 jungang_station = create_station_page(
@@ -370,16 +344,7 @@ jungang_station = create_station_page(
 <p>중앙역과 함께 <a href="/area/jungang-gojan/">중앙역·고잔 생활권</a>, 인접 <a href="/station/gojan-station/">고잔역 홈타이</a>, 그리고 <a href="/danwon-gu/">단원구</a> 전체 안내까지 비교하시면 단원구 중심 역세권을 한눈에 파악하실 수 있습니다. 번화가 주상복합은 출입 절차가 다양한 만큼 예약 단계에서 공동현관과 엘리베이터 동선을 미리 알려주시면 도착부터 마무리까지 매끄럽게 진행됩니다.</p>
 </section>
 
-<section class="pricing">
-<h3>중앙역 기본 요금</h3>
-<p><strong>중앙역 역세권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 gojan_station = create_station_page(
@@ -462,16 +427,7 @@ gojan_station = create_station_page(
 <p>고잔역과 함께 <a href="/area/jungang-gojan/">중앙역·고잔 생활권</a>, 인접 <a href="/station/jungang-station/">중앙역 출장마사지</a>, <a href="/station/choji-station/">초지역 홈타이</a> 안내까지 비교하시면 단원구 주거 역세권을 폭넓게 파악하실 수 있습니다. 대단지가 많은 고잔역 특성상 같은 단지 안에서도 동에 따라 출입구가 다르므로 예약 시 가까운 출입구를 함께 알려주시면 더욱 신속하게 도착할 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>고잔역 기본 요금</h3>
-<p><strong>고잔역 역세권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 choji_station = create_station_page(
@@ -554,16 +510,7 @@ choji_station = create_station_page(
 <p>초지역과 함께 <a href="/area/choji-dong/">초지동 생활권</a>, 인접 <a href="/station/gojan-station/">고잔역 출장마사지</a>, 서해선 연계 <a href="/station/seonbu-station/">선부역 홈타이</a> 안내까지 비교하시면 단원구 신도시 역세권을 폭넓게 파악하실 수 있습니다. 3개 노선이 모이는 초지역은 출구 번호만 알려주셔도 가장 가까운 동선을 빠르게 안내드릴 수 있어 처음 방문하시는 분도 어렵지 않게 이용하실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>초지역 기본 요금</h3>
-<p><strong>초지역 역세권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 ansan_station = create_station_page(
@@ -646,16 +593,7 @@ ansan_station = create_station_page(
 <p>안산역과 함께 <a href="/area/ansan-station-wongok/">안산역·원곡 생활권</a>, 인접 <a href="/station/wongok-station/">원곡역 홈타이</a>, 그리고 <a href="/danwon-gu/wongok-dong/">원곡동</a> 안내까지 비교하시면 안산 서부 상업 역세권을 폭넓게 파악하실 수 있습니다. 상업지구라 비슷한 간판과 건물이 많은 만큼 예약 시 층과 호실을 정확히 알려주시면 도착 지연 없이 약속한 시간에 맞춰 방문 안내가 진행됩니다.</p>
 </section>
 
-<section class="pricing">
-<h3>안산역 기본 요금</h3>
-<p><strong>안산역 역세권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 shingiloncheon_station = create_station_page(
@@ -738,16 +676,7 @@ shingiloncheon_station = create_station_page(
 <p>신길온천역과 함께 인접 <a href="/station/seonbu-station/">선부역 출장마사지</a>, <a href="/danwon-gu/seonbu-dong/">선부동</a> 안내, 그리고 <a href="/danwon-gu/">단원구</a> 전체 안내까지 비교하시면 안산 외곽 역세권을 폭넓게 파악하실 수 있습니다. 외곽이라 이동 시간이 다소 걸릴 수 있으니 예약을 조금 여유 있게 잡아주시면 약속한 시간에 맞춰 차분하고 안정적으로 방문 안내가 진행됩니다. 온천·휴양 시설 인근은 주말과 휴일에 방문객이 늘어 도로가 붐빌 수 있으니, 가능하시면 평일이나 한가한 시간대를 활용하시면 더욱 여유롭게 이용하실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>신길온천역 기본 요금</h3>
-<p><strong>신길온천역 역세권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 seonbu_station = create_station_page(
@@ -830,16 +759,7 @@ seonbu_station = create_station_page(
 <p>선부역과 함께 <a href="/danwon-gu/seonbu-dong/">선부동</a> 생활권, 인접 <a href="/station/shingiloncheon-station/">신길온천역 홈타이</a>, 서해선 연계 <a href="/station/dalmi-station/">달미역 출장마사지</a> 안내까지 비교하시면 안산 서부 주거 역세권을 폭넓게 파악하실 수 있습니다. 선부동은 단지 규모가 다양해 같은 단지라도 출입구가 여러 곳이므로 가까운 정문이나 후문을 함께 알려주시면 방문 동선이 한층 정확해집니다. 또한 단지 내 방문 차량 등록은 경비실이나 입주민 앱으로 미리 진행해 두시면 출입 단계에서 기다리는 시간 없이 곧바로 안내가 이어집니다.</p>
 </section>
 
-<section class="pricing">
-<h3>선부역 기본 요금</h3>
-<p><strong>선부역 역세권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 wongok_station = create_station_page(
@@ -922,16 +842,7 @@ wongok_station = create_station_page(
 <p>원곡역과 함께 <a href="/area/ansan-station-wongok/">안산역·원곡 생활권</a>, 인접 <a href="/station/ansan-station/">안산역 출장마사지</a>, 그리고 <a href="/danwon-gu/wongok-dong/">원곡동</a> 안내까지 비교하시면 안산 서부 상업 역세권을 폭넓게 파악하실 수 있습니다. 안산역과 가까운 만큼 두 역 중 어느 쪽이 거주지에서 가까운지 알려주시면 더 짧은 동선으로 안내드릴 수 있어 이동 시간을 줄일 수 있습니다. 원곡동 상업지구는 야간에도 상점이 활발히 운영되어 늦은 시간 예약 문의도 가능하니, 자세한 가능 시간대는 전화 상담으로 확인하시면 더욱 정확합니다.</p>
 </section>
 
-<section class="pricing">
-<h3>원곡역 기본 요금</h3>
-<p><strong>원곡역 역세권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 dalmi_station = create_station_page(
@@ -1014,16 +925,7 @@ dalmi_station = create_station_page(
 <p>달미역과 함께 인접 <a href="/station/seonbu-station/">선부역 출장마사지</a>, <a href="/danwon-gu/seonbu-dong/">선부동</a> 안내, 그리고 <a href="/danwon-gu/">단원구</a> 전체 안내까지 비교하시면 안산 서부 주거 역세권을 폭넓게 파악하실 수 있습니다. 한적한 주택가라 비슷한 외관의 건물이 많으므로 도로명 주소와 건물 색상·층수 같은 특징을 함께 알려주시면 더 빠르게 찾아갈 수 있습니다. 달미역은 서해선 한 노선으로 운행되는 만큼 출퇴근 시간대를 피하면 한결 한가로운 환경에서 편안하게 방문 서비스를 받으실 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>달미역 기본 요금</h3>
-<p><strong>달미역 역세권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 wonsi_station = create_station_page(
@@ -1106,16 +1008,7 @@ wonsi_station = create_station_page(
 <p>원시역과 함께 <a href="/area/wonsi-sihwa/">원시·시화 생활권</a>, 인접 <a href="/station/seonbu-station/">선부역 홈타이</a>, 서해선 연계 <a href="/station/dalmi-station/">달미역 출장마사지</a> 안내까지 비교하시면 안산 서남부 신흥 역세권을 폭넓게 파악하실 수 있습니다. 개발이 진행 중인 구역은 신축 단지와 공사 구간이 섞여 있으므로 단지명과 입주 동, 정문 위치를 함께 알려주시면 헤매지 않고 정확하게 도착할 수 있습니다.</p>
 </section>
 
-<section class="pricing">
-<h3>원시역 기본 요금</h3>
-<p><strong>원시역 역세권 출장마사지 기본 요금</strong></p>
-<ul>
-<li>1시간: 70,000원~</li>
-<li>2시간: 140,000원~</li>
-</ul>
-<p><a href="tel:0508-202-4719">0508-202-4719</a></p>
-</section>
-"""
+""" + get_pricing_section()
 )
 
 # PAGES 리스트에 모든 역세권 페이지 집계
