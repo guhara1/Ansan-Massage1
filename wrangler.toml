@@ -1,0 +1,15 @@
+name = "ansan-massage1"
+type = "javascript"
+
+[build]
+command = "python3 build.py"
+cwd = "./"
+watch_paths = ["content/**/*.py", "build.py"]
+
+[build.upload]
+format = "service-worker"
+
+[env.production]
+routes = [
+  { pattern = "ansan-massage1.pages.dev", zone_name = "pages.dev" }
+]

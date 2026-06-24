@@ -19,6 +19,7 @@ from content import PAGES
 from content.site import (BASE_URL, BRAND, NAV, PHONE, PHONE_DISPLAY)
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+PUBLIC_DIR = os.path.join(ROOT, "public")
 MIN_INDEX_CHARS = 2000
 
 
@@ -251,9 +252,12 @@ def build() -> None:
     report = []
     sitemap_urls = []
 
+    # public 디렉터리가 없으면 생성
+    os.makedirs(PUBLIC_DIR, exist_ok=True)
+
     for page in PAGES:
         path = page["path"]
-        out_dir = os.path.join(ROOT, path)
+        out_dir = os.path.join(PUBLIC_DIR, path)
         os.makedirs(out_dir, exist_ok=True)
         html_out = render_page(page)
         with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
@@ -269,7 +273,7 @@ def build() -> None:
     urls = "\n".join(
         f"  <url><loc>{u}</loc></url>" for u in sitemap_urls
     )
-    with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
+    with open(os.path.join(PUBLIC_DIR, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write(
             '<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -277,14 +281,14 @@ def build() -> None:
         )
 
     # robots.txt
-    with open(os.path.join(ROOT, "robots.txt"), "w", encoding="utf-8") as f:
+    with open(os.path.join(PUBLIC_DIR, "robots.txt"), "w", encoding="utf-8") as f:
         f.write(
             "User-agent: *\nAllow: /\n\n"
             f"Sitemap: {BASE_URL.rstrip('/')}/sitemap.xml\n"
         )
 
     # .nojekyll (GitHub Pages)
-    open(os.path.join(ROOT, ".nojekyll"), "w").close()
+    open(os.path.join(PUBLIC_DIR, ".nojekyll"), "w").close()
 
     width = max(len(p) for p, _, _ in report)
     print(f"{'PATH'.ljust(width)}  CHARS  ROBOTS")
