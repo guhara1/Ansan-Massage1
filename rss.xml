@@ -5,14 +5,49 @@
     <link>https://ansan-massage1.pages.dev/</link>
     <description>안산 출장마사지·홈타이 지역별 안내 업데이트</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 24 Jun 2026 02:38:49 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 02:48:00 +0000</lastBuildDate>
     <atom:link href="https://ansan-massage1.pages.dev/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>안산 출장마사지｜중앙·고잔·초지·상록수 홈타이 지역 안내</title>
       <link>https://ansan-massage1.pages.dev/</link>
       <guid isPermaLink="true">https://ansan-massage1.pages.dev/</guid>
       <description>안산 출장마사지·홈타이 예약 전 중앙동, 고잔동, 초지동, 상록수, 선부동 생활권을 확인하세요.</description>
-      <pubDate>Wed, 24 Jun 2026 02:38:49 +0000</pubDate>
+      <pubDate>Wed, 24 Jun 2026 02:48:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>예약 안내｜안산 출장마사지·홈타이 예약 방법</title>
+      <link>https://ansan-massage1.pages.dev/reservation/</link>
+      <guid isPermaLink="true">https://ansan-massage1.pages.dev/reservation/</guid>
+      <description>안산 출장마사지·홈타이 예약 방법, 취소 정책, 서비스 시간을 확인하세요.</description>
+      <pubDate>Wed, 24 Jun 2026 02:48:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>이용 전 확인사항｜안산 출장마사지·홈타이 안전 가이드</title>
+      <link>https://ansan-massage1.pages.dev/check/</link>
+      <guid isPermaLink="true">https://ansan-massage1.pages.dev/check/</guid>
+      <description>출장마사지·홈타이 이용 전 반드시 확인해야 할 안전 사항을 안내합니다.</description>
+      <pubDate>Wed, 24 Jun 2026 02:48:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>홈타이 이용 가이드｜안산 출장마사지 서비스 설명</title>
+      <link>https://ansan-massage1.pages.dev/guide/</link>
+      <guid isPermaLink="true">https://ansan-massage1.pages.dev/guide/</guid>
+      <description>홈타이 서비스의 개념, 종류, 이용 방법을 안내합니다.</description>
+      <pubDate>Wed, 24 Jun 2026 02:48:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>개인정보처리방침｜안산 출장마사지 개인정보 보호</title>
+      <link>https://ansan-massage1.pages.dev/support/privacy/</link>
+      <guid isPermaLink="true">https://ansan-massage1.pages.dev/support/privacy/</guid>
+      <description>바로 GO의 개인정보 수집, 이용, 보호 정책을 안내합니다.</description>
+      <pubDate>Wed, 24 Jun 2026 02:48:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>고객센터｜안산 출장마사지 문의 및 지원</title>
+      <link>https://ansan-massage1.pages.dev/support/</link>
+      <guid isPermaLink="true">https://ansan-massage1.pages.dev/support/</guid>
+      <description>바로 GO 고객센터 연락처, 문의 방법, 피드백을 안내합니다.</description>
+      <pubDate>Wed, 24 Jun 2026 02:48:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
