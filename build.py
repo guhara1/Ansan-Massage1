@@ -8,6 +8,7 @@ content/ 패키지의 페이지 정의를 읽어 정적 HTML을 생성한다.
   - sitemap.xml 에는 index 허용 페이지만 포함
 """
 import html
+import json
 import os
 import re
 import shutil
@@ -106,6 +107,76 @@ def render_toc(items) -> str:
     )
 
 
+def _ld(obj: dict) -> str:
+    """JSON-LD 스크립트 블록 1개를 만든다."""
+    return (
+        '<script type="application/ld+json">\n'
+        + json.dumps(obj, ensure_ascii=False, indent=2)
+        + "\n</script>\n"
+    )
+
+
+def make_org_schema() -> dict:
+    """사이트 전역 Organization 스키마 (모든 페이지 공통)."""
+    base = BASE_URL.rstrip("/")
+    return {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": base + "/#organization",
+        "name": BRAND,
+        "url": base + "/",
+        "logo": base + "/assets/apple-touch-icon.png",
+        "image": base + "/assets/og-image.png",
+        "telephone": PHONE,
+        "areaServed": {"@type": "AdministrativeArea", "name": "경기도 안산시"},
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": PHONE,
+            "contactType": "reservations",
+            "availableLanguage": ["ko"],
+            "areaServed": "KR",
+        },
+    }
+
+
+def make_breadcrumb_schema(crumbs) -> dict:
+    """breadcrumb 데이터로 BreadcrumbList 스키마 생성 (홈 포함)."""
+    base = BASE_URL.rstrip("/")
+    items = [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "홈",
+        "item": base + "/",
+    }]
+    # breadcrumb 데이터의 첫 항목이 루트("/")를 가리키면 홈과 중복되므로 건너뛴다.
+    rest = crumbs[1:] if crumbs and crumbs[0][1] == "/" else crumbs
+    for i, (label, href) in enumerate(rest, start=2):
+        entry = {"@type": "ListItem", "position": i, "name": label}
+        if href:
+            entry["item"] = base + href
+        items.append(entry)
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": items,
+    }
+
+
+def make_webpage_schema(title: str, desc: str, canonical: str) -> dict:
+    """페이지 단위 WebPage 스키마."""
+    base = BASE_URL.rstrip("/")
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": title,
+        "description": desc,
+        "url": canonical,
+        "inLanguage": "ko",
+        "isPartOf": {"@id": base + "/#organization"},
+        "publisher": {"@id": base + "/#organization"},
+    }
+
+
 def render_page(page: dict) -> str:
     path = page["path"]
     title = page["title"]
@@ -137,6 +208,17 @@ def render_page(page: dict) -> str:
     toc_html = render_toc(toc_items)
     layout_cls = "page-layout has-toc" if toc_html else "page-layout"
 
+    # 스키마 자동 주입.
+    # 메인(hero 보유)은 main.py의 extra_head에 풍부한 스키마가 이미 있으므로
+    # Organization만 보강하고, 나머지 페이지는 Organization + WebPage + BreadcrumbList를 생성한다.
+    if hero:
+        auto_schema = _ld(make_org_schema())
+    else:
+        blocks = [make_org_schema(), make_webpage_schema(title, desc, canonical)]
+        if crumbs:
+            blocks.append(make_breadcrumb_schema(crumbs))
+        auto_schema = "".join(_ld(b) for b in blocks)
+
     return f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -166,7 +248,7 @@ def render_page(page: dict) -> str:
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <link rel="stylesheet" href="/assets/style.css">
-{extra_head}</head>
+{auto_schema}{extra_head}</head>
 <body>
 <header class="site-header">
   <div class="header-accent" aria-hidden="true"></div>
@@ -207,24 +289,24 @@ def render_page(page: dict) -> str:
       <p class="footer-title">서비스</p>
       <ul>
         <li><a href="/">안산 출장마사지</a></li>
-        <li><a href="/gyeonggi/ansan/sangnok-gu/">구별 안내</a></li>
-        <li><a href="/gyeonggi/ansan/areas/">지역별 안내</a></li>
-        <li><a href="/gyeonggi/ansan/station/">역세권 안내</a></li>
-        <li><a href="/gyeonggi/ansan/area/">생활권 안내</a></li>
+        <li><a href="/sangnok-gu/">구별 안내</a></li>
+        <li><a href="/danwon-gu/jungang-dong/">지역별 안내</a></li>
+        <li><a href="/station/sangnoksu-station/">역세권 안내</a></li>
+        <li><a href="/area/jungang-gojan/">생활권 안내</a></li>
       </ul>
     </nav>
     <nav class="footer-col" aria-label="이용 안내">
       <p class="footer-title">이용 안내</p>
       <ul>
-        <li><a href="/gyeonggi/ansan/reservation/">예약안내</a></li>
-        <li><a href="/gyeonggi/ansan/check/">이용 전 확인사항</a></li>
-        <li><a href="#support">고객센터</a></li>
+        <li><a href="/reservation/">예약안내</a></li>
+        <li><a href="/check/">이용 전 확인사항</a></li>
+        <li><a href="/support/">고객센터</a></li>
       </ul>
     </nav>
     <nav class="footer-col" aria-label="정책 및 기준">
       <p class="footer-title">정책</p>
       <ul>
-        <li><a href="/gyeonggi/ansan/support/privacy/">개인정보처리방침</a></li>
+        <li><a href="/support/privacy/">개인정보처리방침</a></li>
         <li><a href="https://t.me/googleseolab" target="_blank" rel="noopener nofollow">문의하기</a></li>
       </ul>
     </nav>
