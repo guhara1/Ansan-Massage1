@@ -99,8 +99,8 @@ _HERO = """<div class="hero">
     <div class="hero-cta">
       <a href="#coverage" class="btn btn-primary">지역별 안내 보기</a>
       <a href="#stations" class="btn btn-secondary">가까운 역 찾기</a>
-      <a href="/gyeonggi/ansan/reservation/" class="btn btn-secondary">예약 안내 보기</a>
-      <a href="/gyeonggi/ansan/check/" class="btn btn-secondary">이용 전 확인사항</a>
+      <a href="/reservation/" class="btn btn-secondary">예약 안내 보기</a>
+      <a href="/check/" class="btn btn-secondary">이용 전 확인사항</a>
     </div>
   </div>
   <div class="hero-stats">
@@ -124,7 +124,7 @@ _HERO = """<div class="hero">
 </div>"""
 
 PAGE = {
-    "path": "gyeonggi/ansan/",
+    "path": "",
     "title": "안산 출장마사지｜중앙·고잔·초지·상록수 홈타이 지역 안내",
     "desc": DESC,
     "h1": "안산 출장마사지·홈타이 지역별 예약 안내",
@@ -143,12 +143,12 @@ PAGE = {
 <section id="coverage">
   <h2>상록구·단원구 생활권 차이</h2>
   <div class="card-grid">
-    <a href="/gyeonggi/ansan/sangnok-gu/" class="card">
+    <a href="/sangnok-gu/" class="card">
       <h3>상록구</h3>
       <p>상록수역, 한대앞역, 본오동, 사동, 월피동 중심 생활권</p>
       <span class="card-arrow">→</span>
     </a>
-    <a href="/gyeonggi/ansan/danwon-gu/" class="card">
+    <a href="/danwon-gu/" class="card">
       <h3>단원구</h3>
       <p>중앙역, 고잔역, 초지역, 안산역, 선부동, 원곡동 중심 생활권</p>
       <span class="card-arrow">→</span>
@@ -159,35 +159,35 @@ PAGE = {
 <section id="areas">
   <h2>안산 대표 지역별 방문 가능 지역 안내</h2>
   <div class="card-grid">
-    <a href="/gyeonggi/ansan/danwon-gu/jungang-dong/" class="card">
+    <a href="/danwon-gu/jungang-dong/" class="card">
       <h3>중앙동</h3>
       <p>중앙역, 고잔동, 안산 중심상권 인접 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/danwon-gu/gojan-dong/" class="card">
+    <a href="/danwon-gu/gojan-dong/" class="card">
       <h3>고잔동</h3>
       <p>고잔역, 중앙역, 호수동 인접 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/danwon-gu/choji-dong/" class="card">
+    <a href="/danwon-gu/choji-dong/" class="card">
       <h3>초지동</h3>
       <p>초지역, 단원구청, 고잔신도시 인접 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/danwon-gu/wongok-dong/" class="card">
+    <a href="/danwon-gu/wongok-dong/" class="card">
       <h3>원곡동</h3>
       <p>안산역, 원곡역, 다문화거리 인접 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/danwon-gu/seonbu-dong/" class="card">
+    <a href="/danwon-gu/seonbu-dong/" class="card">
       <h3>선부동</h3>
       <p>선부역, 달미역, 와동 인접 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/sangnok-gu/bono-dong/" class="card">
+    <a href="/sangnok-gu/bono-dong/" class="card">
       <h3>본오동</h3>
       <p>상록수역, 사동, 이동 인접 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/sangnok-gu/sa-dong/" class="card">
+    <a href="/sangnok-gu/sa-dong/" class="card">
       <h3>사동</h3>
       <p>한대앞역, 해양동, 사이동 인접 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/sangnok-gu/wolpi-dong/" class="card">
+    <a href="/sangnok-gu/wolpi-dong/" class="card">
       <h3>월피동</h3>
       <p>성포동, 부곡동, 안산시청 인접 생활권</p>
     </a>
@@ -198,39 +198,39 @@ PAGE = {
   <h2>안산 주요 지하철역별 홈타이 안내</h2>
   <p>안산시의 주요 지하철역별로 인접한 지역과 예약 기준을 안내합니다. 각 역을 클릭하여 상세 정보를 확인하세요.</p>
   <div class="card-grid">
-    <a href="/gyeonggi/ansan/station/sangnoksu-station/" class="card">
+    <a href="/station/sangnoksu-station/" class="card">
       <h3>상록수역</h3>
       <p>본오동, 이동 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/station/hanyang-univ-at-ansan-station/" class="card">
+    <a href="/station/hanyang-univ-at-ansan-station/" class="card">
       <h3>한대앞역</h3>
       <p>사동, 이동 인접 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/station/jungang-station/" class="card">
+    <a href="/station/jungang-station/" class="card">
       <h3>중앙역</h3>
       <p>중앙동, 고잔동 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/station/gojan-station/" class="card">
+    <a href="/station/gojan-station/" class="card">
       <h3>고잔역</h3>
       <p>고잔동, 호수동 인접권</p>
     </a>
-    <a href="/gyeonggi/ansan/station/choji-station/" class="card">
+    <a href="/station/choji-station/" class="card">
       <h3>초지역</h3>
       <p>초지동, 단원구청 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/station/ansan-station/" class="card">
+    <a href="/station/ansan-station/" class="card">
       <h3>안산역</h3>
       <p>원곡동, 백운동 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/station/seonbu-station/" class="card">
+    <a href="/station/seonbu-station/" class="card">
       <h3>선부역</h3>
       <p>선부동, 와동 생활권</p>
     </a>
-    <a href="/gyeonggi/ansan/station/wongok-station/" class="card">
+    <a href="/station/wongok-station/" class="card">
       <h3>원곡역</h3>
       <p>원곡동, 안산역 인접권</p>
     </a>
-    <a href="/gyeonggi/ansan/station/wonsi-station/" class="card">
+    <a href="/station/wonsi-station/" class="card">
       <h3>원시역</h3>
       <p>원시, 시화공단 인접권</p>
     </a>
@@ -241,11 +241,11 @@ PAGE = {
   <h2>안산 생활권별 예약 기준</h2>
   <p>지역과 역을 연결한 생활권 기준으로 예약하면 더 정확한 방문 주소와 이동 시간을 확인할 수 있습니다.</p>
   <div class="card-grid">
-    <a href="/gyeonggi/ansan/area/jungang-gojan/" class="card">중앙역·고잔</a>
-    <a href="/gyeonggi/ansan/area/choji-dong/" class="card">초지역·초지동</a>
-    <a href="/gyeonggi/ansan/area/ansan-station-wongok/" class="card">안산역·원곡동</a>
-    <a href="/gyeonggi/ansan/area/sangnoksu-bono/" class="card">상록수·본오</a>
-    <a href="/gyeonggi/ansan/area/seonbu-station/" class="card">선부역·선부동</a>
+    <a href="/area/jungang-gojan/" class="card">중앙역·고잔</a>
+    <a href="/area/choji-dong/" class="card">초지역·초지동</a>
+    <a href="/area/ansan-station-wongok/" class="card">안산역·원곡동</a>
+    <a href="/area/sangnoksu-bono/" class="card">상록수·본오</a>
+    <a href="/area/seonbu-station/" class="card">선부역·선부동</a>
   </div>
 </section>
 

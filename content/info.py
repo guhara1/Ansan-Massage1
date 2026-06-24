@@ -14,7 +14,7 @@ def create_info_page(path, title, desc, h1, breadcrumb, body_content):
 # ===== 5개 정보 페이지 =====
 
 reservation = create_info_page(
-    path="gyeonggi/ansan/reservation/",
+    path="reservation/",
     title="예약 안내｜안산 출장마사지·홈타이 예약 방법",
     desc="안산 출장마사지·홈타이 예약 방법, 취소 정책, 서비스 시간을 확인하세요.",
     h1="예약 안내",
@@ -97,7 +97,7 @@ reservation = create_info_page(
 
 <section>
 <h2>안전 및 신뢰</h2>
-<p>바로 GO는 <a href="/gyeonggi/ansan/check/">이용 전 확인사항</a>을 꼭 읽으신 후 예약하시기를 권장합니다. 건전하고 안전한 서비스 이용을 위해 필요한 모든 정보를 담고 있습니다.</p>
+<p>바로 GO는 <a href="/check/">이용 전 확인사항</a>을 꼭 읽으신 후 예약하시기를 권장합니다. 건전하고 안전한 서비스 이용을 위해 필요한 모든 정보를 담고 있습니다.</p>
 </section>
 
 <section>
@@ -125,7 +125,7 @@ reservation = create_info_page(
 )
 
 check = create_info_page(
-    path="gyeonggi/ansan/check/",
+    path="check/",
     title="이용 전 확인사항｜안산 출장마사지·홈타이 안전 가이드",
     desc="출장마사지·홈타이 이용 전 반드시 확인해야 할 안전 사항을 안내합니다.",
     h1="이용 전 확인사항",
@@ -191,7 +191,7 @@ check = create_info_page(
 <ul>
 <li>예약 정보는 예약 목적으로만 사용</li>
 <li>개인정보는 제3자와 공유하지 않음</li>
-<li><a href="/gyeonggi/ansan/support/privacy/">개인정보처리방침</a> 준수</li>
+<li><a href="/support/privacy/">개인정보처리방침</a> 준수</li>
 <li>고객 비밀 유지</li>
 </ul>
 </section>
@@ -203,7 +203,7 @@ check = create_info_page(
 <li>즉시 서비스를 중단합니다</li>
 <li>고객의 의견을 듣고 성실하게 처리합니다</li>
 <li>필요한 경우 재서비스를 제공합니다</li>
-<li>반복되는 문제는 <a href="/gyeonggi/ansan/support/">고객센터</a>에 보고합니다</li>
+<li>반복되는 문제는 <a href="/support/">고객센터</a>에 보고합니다</li>
 </ol>
 </section>
 
@@ -227,7 +227,7 @@ check = create_info_page(
 )
 
 guide = create_info_page(
-    path="gyeonggi/ansan/guide/",
+    path="guide/",
     title="홈타이 이용 가이드｜안산 출장마사지 서비스 설명",
     desc="홈타이 서비스의 개념, 종류, 이용 방법을 안내합니다.",
     h1="홈타이 이용 가이드",
@@ -329,11 +329,11 @@ guide = create_info_page(
 )
 
 privacy = create_info_page(
-    path="gyeonggi/ansan/support/privacy/",
+    path="support/privacy/",
     title="개인정보처리방침｜안산 출장마사지 개인정보 보호",
     desc="바로 GO의 개인정보 수집, 이용, 보호 정책을 안내합니다.",
     h1="개인정보처리방침",
-    breadcrumb=[("안산", "/"), ("고객센터", "/gyeonggi/ansan/support/"), ("개인정보처리방침", "")],
+    breadcrumb=[("안산", "/"), ("고객센터", "/support/"), ("개인정보처리방침", "")],
     body_content="""
 <section>
 <h2>개인정보처리방침 개요</h2>
@@ -440,7 +440,7 @@ privacy = create_info_page(
 )
 
 support = create_info_page(
-    path="gyeonggi/ansan/support/",
+    path="support/",
     title="고객센터｜안산 출장마사지 문의 및 지원",
     desc="바로 GO 고객센터 연락처, 문의 방법, 피드백을 안내합니다.",
     h1="고객센터",
@@ -473,7 +473,7 @@ support = create_info_page(
 <h2>문의 사항 안내</h2>
 <p>고객센터로 다음 사항들을 문의할 수 있습니다:</p>
 <ul>
-<li><strong>예약</strong>: <a href="/gyeonggi/ansan/reservation/">예약 안내</a> 참조</li>
+<li><strong>예약</strong>: <a href="/reservation/">예약 안내</a> 참조</li>
 <li><strong>취소</strong>: 예약된 서비스 취소</li>
 <li><strong>변경</strong>: 예약 시간 또는 내용 변경</li>
 <li><strong>불만사항</strong>: 서비스 이용 중 문제</li>
@@ -521,10 +521,10 @@ support = create_info_page(
 <h2>다른 지원</h2>
 <p><strong>기타 도움이 필요한 사항:</strong></p>
 <ul>
-<li><a href="/gyeonggi/ansan/check/">이용 전 확인사항</a> — 안전 가이드</li>
-<li><a href="/gyeonggi/ansan/guide/">홈타이 이용 가이드</a> — 서비스 설명</li>
-<li><a href="/gyeonggi/ansan/support/privacy/">개인정보처리방침</a> — 개인정보 보호</li>
-<li><a href="/gyeonggi/ansan/">메인 페이지</a> — 전체 정보</li>
+<li><a href="/check/">이용 전 확인사항</a> — 안전 가이드</li>
+<li><a href="/guide/">홈타이 이용 가이드</a> — 서비스 설명</li>
+<li><a href="/support/privacy/">개인정보처리방침</a> — 개인정보 보호</li>
+<li><a href="/">메인 페이지</a> — 전체 정보</li>
 </ul>
 </section>
 
