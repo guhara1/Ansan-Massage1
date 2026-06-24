@@ -1,5 +1,7 @@
 import json
-from .site import BRAND
+from .site import BRAND, BASE_URL, PHONE
+
+_BASE = BASE_URL.rstrip("/")
 
 # 메타 설명 (80자 이내)
 DESC = "안산 출장마사지·홈타이 예약 전 중앙동, 고잔동, 초지동, 상록수, 선부동 생활권을 확인하세요."
@@ -47,9 +49,9 @@ _org_schema = {
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
     "name": BRAND,
-    "telephone": "0508-202-4719",
-    "url": "https://www.ansan-massage.example.com",
-    "image": "https://www.ansan-massage.example.com/assets/og-image.png",
+    "telephone": PHONE,
+    "url": _BASE + "/",
+    "image": _BASE + "/assets/og-image.png",
     "description": "안산시 출장마사지·홈타이 안내 사이트",
     "areaServed": {
         "@type": "AdministrativeArea",
@@ -74,7 +76,7 @@ _breadcrumb_schema = {
             "@type": "ListItem",
             "position": 1,
             "name": "홈",
-            "item": "https://www.ansan-massage.example.com/"
+            "item": _BASE + "/"
         }
     ]
 }

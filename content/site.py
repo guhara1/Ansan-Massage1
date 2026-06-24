@@ -1,6 +1,6 @@
 # 안산시 출장마사지 사이트 공통 설정
 
-BASE_URL = "https://www.ansan-massage.example.com"
+BASE_URL = "https://ansan-massage1.pages.dev"
 
 BRAND = "바로 GO"
 PHONE = "0508-202-4719"
