@@ -334,7 +334,9 @@ a:hover { color: var(--orange-primary); }
 /* ── 메인 컨텐츠 ────────────────────── */
 .site-main {
   background: var(--bg);
-  padding: 48px 0;
+  padding: 48px 24px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .page-content {
@@ -783,7 +785,9 @@ strong {
 .page-layout.has-toc {
   display: grid;
   grid-template-columns: 220px 1fr;
-  gap: 40px;
+  gap: 60px;
+  max-width: var(--max);
+  margin: 0 auto;
 }
 
 .page-layout.has-toc .page-toc {
