@@ -334,13 +334,12 @@ a:hover { color: var(--orange-primary); }
 /* ── 메인 컨텐츠 ────────────────────── */
 .site-main {
   background: var(--bg);
-  padding: 48px 24px;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 48px 0;
 }
 
 .page-content {
   animation: fadeIn 0.3s ease-in-out;
+  padding: 0 20px;
 }
 
 @keyframes fadeIn {
@@ -782,12 +781,17 @@ strong {
   backdrop-filter: blur(8px);
 }
 
+.page-layout {
+  padding: 0 40px;
+}
+
 .page-layout.has-toc {
   display: grid;
   grid-template-columns: 220px 1fr;
-  gap: 60px;
-  max-width: var(--max);
+  gap: 80px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 .page-layout.has-toc .page-toc {
