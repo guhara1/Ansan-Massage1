@@ -1063,6 +1063,82 @@ strong {
   h2 { font-size: 1.3rem; }
 }
 
+/* ── 후기·평점 ─────────────────────────── */
+.reviews { margin-top: 40px; }
+
+.reviews-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
+  padding: 22px 26px;
+  margin: 18px 0 26px;
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.10), rgba(200, 162, 94, 0.06));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.reviews-score {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.score-num {
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--orange-light);
+}
+
+.score-stars { font-size: 1.25rem; color: var(--orange-primary); letter-spacing: 2px; }
+.score-count { color: var(--text-dim); font-size: 0.95rem; font-weight: 500; }
+.reviews-note { color: var(--text-dim); font-size: 0.9rem; flex: 1 1 240px; margin: 0; }
+
+.review-list { list-style: none; display: grid; gap: 14px; margin: 0; padding: 0; }
+
+.review-item {
+  padding: 18px 20px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.review-item:hover { border-color: rgba(255, 107, 53, 0.4); }
+
+.review-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.review-author { font-weight: 700; color: var(--text); }
+.review-stars { color: var(--orange-primary); letter-spacing: 1px; }
+.review-head time { color: var(--text-dim); font-size: 0.82rem; margin-left: auto; }
+.review-body { margin: 0; color: var(--text-dim); font-size: 0.96rem; }
+
+/* ── 내부링크 허브 / 관련 지역 ───────────── */
+.link-hub { margin-top: 44px; }
+.hub-group { margin-top: 28px; }
+
+.hub-heading {
+  margin: 0 0 4px;
+  padding-left: 12px;
+  border-left: 3px solid var(--orange-primary);
+  color: var(--orange-light);
+  font-size: 1.12rem;
+}
+
+.related-areas { margin-top: 40px; }
+
+.link-card h3 { font-size: 1.06rem; }
+.link-card p { margin-top: 6px; }
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;

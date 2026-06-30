@@ -1,0 +1,27 @@
+# Netlify 배포 설정 — 저장소 루트에 생성된 정적 HTML을 그대로 게시한다.
+# (build.py 결과물이 루트에 커밋되어 있으므로 별도 빌드 명령은 필요 없다.)
+[build]
+  publish = "."
+  command = ""
+
+# 정적 자산 장기 캐시
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# 색인/소유확인 파일은 항상 최신으로
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/rss.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

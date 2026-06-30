@@ -1,6 +1,6 @@
 # 안산시 출장마사지 사이트 공통 설정
 
-BASE_URL = "https://ansan-massage1.pages.dev"
+BASE_URL = "https://ansan-massage1.netlify.app"
 
 BRAND = "바로 GO"
 PHONE = "0508-202-4719"
@@ -8,7 +8,7 @@ PHONE_DISPLAY = "0508-202-4719"
 
 # ── 검색엔진 등록 / 색인 ──────────────────
 # 네이버 서치어드바이저 사이트 소유확인 메타값
-NAVER_SITE_VERIFICATION = "07fa13c99d73b2c0b5387da4c585973ac55b35e3"
+NAVER_SITE_VERIFICATION = "91ae54ec120dcc687de2035625d6ce0a69dba73b"
 # 구글 서치콘솔 메타 태그값(선택). 발급받으면 채워 넣으세요.
 GOOGLE_SITE_VERIFICATION = ""
 # IndexNow 키 (빙·네이버·얀덱스 공용 즉시 색인 통보).
